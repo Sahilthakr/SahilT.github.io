@@ -9,14 +9,122 @@
   <title tabindex="1">Projetos</title>
 </head>
 <body>
+
+  <style>
+    /* Logo Styles */
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .logo-animated {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-animated:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-text {
+      font-size: 48px;
+      font-weight: bold;
+      letter-spacing: 6px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .first-name {
+      color: #FFD700;
+      animation: fadeInSlide 1s ease-out;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    }
+
+    .last-name {
+      color: #ffffff;
+      animation: fadeInSlide 1s ease-out 0.3s backwards;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+      margin-left: 10px;
+    }
+
+    .logo-underline {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #FFD700, #ffffff);
+      animation: expandLine 1.5s ease-out 0.6s forwards;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+    }
+
+    .logo-animated:hover .first-name {
+      animation: glow 1.5s ease-in-out infinite;
+    }
+
+    .logo-animated:hover .last-name {
+      animation: glow 1.5s ease-in-out infinite 0.2s;
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes expandLine {
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        text-shadow: 0 0 15px rgba(255, 215, 0, 0.6),
+                     0 0 30px rgba(255, 215, 0, 0.4);
+      }
+      50% {
+        text-shadow: 0 0 25px rgba(255, 215, 0, 0.9),
+                     0 0 50px rgba(255, 215, 0, 0.6),
+                     0 0 70px rgba(255, 215, 0, 0.4);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo-text {
+        font-size: 32px;
+        letter-spacing: 3px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-text {
+        font-size: 24px;
+        letter-spacing: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
   <header id="lockup">
-    <!-- logo animado -->
+    <!-- Animated Logo -->
     <div class="logo">
-        <a class="menu" href="about.html" >Sahil Thakur</a>
-    </div>
-    <!-- menu linguas -->
-    <div class="languages">
-      <a class="link">Hi There</a>
+      <div class="logo-animated">
+        <div class="logo-text">
+          <span class="first-name">SAHIL</span>
+          <span class="last-name">THAKUR</span>
+          <div class="logo-underline"></div>
+        </div>
+      </div>
     </div>
   </header>
   <!-- close logo -->
@@ -28,65 +136,35 @@
           <li><a class="menu-ativo" href="" >Menu</a></li>
           <li><a class="menu" href="about.html" >About</a></li>
           <li><a></a></li>
-          <li><a class="titulo-menu"><strong>Projetos:</strong></a></li>
-          <li><a class="menu" href="../Simulador-SEP-Torque/">2D Platfomer</a></li>
-          <li><a class="menu" href="../Game-of-Life">Flappy Bird</a></li>
-          <li><a class="menu" href="../planetario">2d Ninja Hathodi</a></li>
+          <li><a class="titulo-menu"><strong>Projects:</strong></a></li>
+          <li><a class="menu" href="../en/Orbit Game/index.html">Orbit Game</a></li>
+       
         </ul>
       </nav>
       <nav>
         <ul>
-          <li class="links"><a class="menu" href="https://andersonlot.wordpress.com" target="_blank">Blog</a></li>
-          <li class="links"><a class="menu" href="https://github.com/andersonlot" target="_blank">GitHub</a></li>
-          <li class="links"><a class="menu" href="https://br.linkedin.com/in/anderson-lot-roman-075928152" target="_blank">LinkedIn</a></li>
+      <li class="links"><a class="menu" href="https://github.com/Sahilthakr" target="_blank">GitHub</a></li>
+          <li class="links"><a class="menu" href="https://www.linkedin.com/in/sahilnetdev/" target="_blank">LinkedIn</a></li>
         </ul>
       </nav>
     </div>
     <main>
       <div id="home-page">
-        <h2>Meus Projetos</h2>
+        
         <h2>My Projects</h2>
-        <div class="grid_projects">  
-        
-          <a class="item_grid_projects" href="../2D-Platformer/">
+         <div class="grid_projects">  
+          <a class="item_grid_projects">
             <div class="card">
-              <img src="assets/projects/gearSEP.gif" alt="2D Platformer" style="width:100%">
+              <div class="tenor-gif-embed" data-postid="16351663" data-share-method="host" data-aspect-ratio="1.01587" data-width="100%"><a href="https://tenor.com/view/space-orbit-solar-system-planets-gif-16351663">Space Orbit GIF</a>from <a href="https://tenor.com/search/space-gifs">Space GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
               <div class="card_container">
-                <h4><b>2D Platformer</b></h4>
-                <p>This project is a simple 2D platformer, focusing on physics, level design, and character movement.</p>
+                <h4><b>Orbit Game</b></h4>
+                <p></p>
               </div>
             </div>
           </a>
-        
-          <a class="item_grid_projects" href="../Flappy-Bird/">
-            <div class="card">
-              <img src="assets/projects/game_of_life.gif" alt="Flappy Bird" style="width:100%">
-              <div class="card_container">
-                <h4><b>Flappy Bird</b></h4>
-                <p>This is a 2D arcade game inspired by Flappy Bird, created using Unity and C#.</p>
-              </div>
-            </div>
-          </a>
-        
-          <a class="item_grid_projects" href="../2D-Ninja-Hathodi/">
-            <div class="card">
-              <img src="assets/projects/planetario.gif" alt="2D Ninja Hathodi" style="width:100%">
-              <div class="card_container">
-                <h4><b>2D Ninja Hathodi</b></h4>
-                <p>This fast-paced action game is centered around a ninja with unique abilities, created using Unity.</p>
-              </div>
-            </div>
-          </a>
-        
-          <a class="item_grid_projects" href="../Tetris-Old-Style/">
-            <div class="card">
-              <img src="assets/projects/tetris.gif" alt="Tetris" style="width:100%">
-              <div class="card_container">
-                <h4><b>Tetris</b></h4>
-                <p>This platform simulates an old-style version of Tetris, developed with Unity and C#.</p>
-              </div>
-            </div>
-          </a>
+
+      
+
         </div>
       </div>
     </main>

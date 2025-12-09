@@ -1,87 +1,290 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js">
 
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="../style.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title tabindex="1">Anderson Lot</title>
+  <title tabindex="1">About - Sahil Thakur</title>
 
+  <style>
+    /* Logo Styles */
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
 
+    .logo-animated {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
 
- 
+    .logo-animated:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-text {
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .first-name {
+      color: #FFD700;
+      animation: fadeInSlide 1s ease-out;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    }
+
+    .last-name {
+      color: #ffffff;
+      animation: fadeInSlide 1s ease-out 0.3s backwards;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+      margin-left: 8px;
+    }
+
+    .logo-underline {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #FFD700, #ffffff);
+      animation: expandLine 1.5s ease-out 0.6s forwards;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+    }
+
+    .logo-animated:hover .first-name {
+      animation: glow 1.5s ease-in-out infinite;
+    }
+
+    .logo-animated:hover .last-name {
+      animation: glow 1.5s ease-in-out infinite 0.2s;
+    }
+
+    .skill-badge {
+      display: inline-block;
+      padding: 6px 12px;
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      color: #000;
+      border-radius: 15px;
+      margin: 5px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .section-highlight {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 4px solid #FFD700;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes expandLine {
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        text-shadow: 0 0 15px rgba(255, 215, 0, 0.6),
+                     0 0 30px rgba(255, 215, 0, 0.4);
+      }
+      50% {
+        text-shadow: 0 0 25px rgba(255, 215, 0, 0.9),
+                     0 0 50px rgba(255, 215, 0, 0.6),
+                     0 0 70px rgba(255, 215, 0, 0.4);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo-text {
+        font-size: 28px;
+        letter-spacing: 3px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-text {
+        font-size: 22px;
+        letter-spacing: 2px;
+      }
+    }
+  </style>
 </head>
 
-
 <body>
-  <!-- logo -->
+  <!-- Logo -->
   <header id="lockup">
     <div class="logo">
-      <video class="logo-animado" autoplay muted loop height="60">
-        <source src="../assets/logo_animado.mp4" type="video/mp4">
-      </video>
-    </div>
-    <!-- menu linguas -->
-    <div class="languages">
-      <a class="link" href="/#">🇬🇧 English</a><a class="link" href="../about.html">🇧🇷 Português</a>
+      <div class="logo-animated">
+        <div class="logo-text">
+          <span class="first-name">SAHIL</span>
+          <span class="last-name">THAKUR</span>
+          <div class="logo-underline"></div>
+        </div>
+      </div>
     </div>
   </header>
-  <!-- close logo -->
+
   <div class="container">
-    <!-- site navigation -->
+    <!-- Site Navigation -->
     <div class="column-span">
       <nav>
         <ul>
-          <li><a class="menu" href="../en/index.html">Home</a></li>
-          <li><a class="menu-ativo" >About</a></li>
+          <li><a class="menu" href="../index.html">Home</a></li>
+          <li><a class="menu-ativo">About</a></li>
           <li><a></a></li>
           <li><a class="titulo-menu"><strong>Projects:</strong></a></li>
-          <li><a class="menu" href="../Simulador-SEP-Torque/">Gear SEP</a></li>
-          <li><a class="menu" href="../Game-of-Life/">Game of Life</a></li>
-          <li><a class="menu" href="../planetario/">Planetary</a></li>
-          <li><a class="menu" href="../Tetris-Old-Style/">Tetris</a></li>
-          <li><a class="menu" href="../snake-game/">Snake Game</a></li>
+          <li><a class="menu" href="../Orbit-Game/index.html">Orbit Game</a></li>
+          <li><a class="menu" href="../AI-Agent/index.html">AI Agent with LLM</a></li>
+          <li><a class="menu" href="../Air-Quality/index.html">Air Quality Monitor</a></li>
         </ul>
       </nav>
       <nav>
         <ul>
-          <li class="links"><a class="menu" href="https://andersonlot.wordpress.com" target="_blank">Blog</a></li>
-          <li class="links"><a class="menu" href="https://github.com/andersonlot" target="_blank">GitHub</a></li>
-          <li class="links"><a class="menu" href="https://br.linkedin.com/in/anderson-lot-roman-075928152" target="_blank">LinkedIn</a></li>
+          <li class="links"><a class="menu" href="https://github.com/Sahilthakr" target="_blank">GitHub</a></li>
+          <li class="links"><a class="menu" href="https://www.linkedin.com/in/sahilnetdev" target="_blank">LinkedIn</a></li>
         </ul>
       </nav>
     </div>
+
     <main>
       <div id="home-page">
-        <h1>Anderson Lot</h1>
-        <p>I'm an Electrical Engineer and I recently discovered that I love coding.</p>
-        <p>My first step was with the classical language C. Some time after it I knew Arduino, then I developed interest in electronics and microcontrolers.</p>
-        <p>I started some projects using Processig, which uses a framework very similar to Arduino, based on JavaScript. At that time I developed a software to calculate the magnitude of some parameter of electric grids, but I didn't share the project, since at that time I still didn't know Github and communities.Soon I whant to present this project here with the others as well.</p>
-        <p>Most recently, through Daniel Shifmann (who has a youtube chanel and a book that I liked so much), I got contact with the P5.js framework, which made it much easier to build projects to keep me connected with this universe in the rare free hours I had in recent years. And now I met GitHub and I'm in love with this plataform and I can't wait to learning and build projects with community.</p>
-        <p>Here in this portfolio, which is also a work on progress, you will find some of the projects that is on progress or finished. You can follow all these projects in <a class="link-texto" href="https://github.com/andersonlot" target="_blank">my GitHub profile</a>. If you want to contribute or sugest, make yourself free to do it.</p>
-        <p>In the future I intend to unify my <a class="link-texto" href="https://andersonlot.wordpress.com" target="_blank">Wordpress Blog</a> project here in this site. Until there, you can check the content in wordpress!</p>
+        <h1>About Me</h1>
+
+        <p>Hi, I'm <strong>Sahil Thakur</strong>, a passionate backend developer and aspiring technologist from Hamirpur, Himachal Pradesh. I specialize in <strong>.NET C# development</strong>, <strong>API development</strong>, and building scalable backend solutions.</p>
+
+        <p>I am currently pursuing my <strong>Master of Computer Applications (MCA)</strong> at Lovely Professional University, Punjab, with a CGPA of 7.5 (expected completion: April 2025). I completed my <strong>Bachelor of Computer Applications (BCA)</strong> from Himachal Pradesh University with a CGPA of 7.1.</p>
+
+        <h2>Professional Experience</h2>
+
+        <div class="section-highlight">
+          <h3>Backend Intern — IGSRS Pvt Ltd (Remote)</h3>
+          <p><em>August 2023 – February 2025</em></p>
+          <ul>
+            <li class="texto">Designed and developed <strong>RESTful APIs</strong> for internal tools and candidate management using ASP.NET Web API and C#</li>
+            <li class="texto">Integrated third-party background verification services into the onboarding pipeline</li>
+            <li class="texto">Worked on the <strong>candidate pipeline module</strong>, implementing stages like application intake, screening, shortlisting, and final selection</li>
+            <li class="texto">Collaborated with the AI team to integrate intelligent features like <strong>resume parsing</strong>, job-role matching, and sentiment-based shortlisting</li>
+            <li class="texto">Participated in daily scrum meetings, sprint planning, and code reviews as part of an Agile team</li>
+            <li class="texto">Optimized backend logic and improved system performance through database indexing and asynchronous programming</li>
+          </ul>
+        </div>
+
+        <div class="section-highlight">
+          <h3>Backend Trainee — Kindlebit Solution Pvt Ltd (On-site)</h3>
+          <p><em>August 2022 – March 2023</em></p>
+          <ul>
+            <li class="texto">Contributed to various phases of the development lifecycle including requirements gathering, analysis, design, and development</li>
+            <li class="texto">Implemented routing mechanisms using <strong>ASP.NET MVC</strong> to direct requests to appropriate controllers</li>
+            <li class="texto">Developed applications using Visual Studio 2019/2022, .NET Framework 3.0, C#, ASP.NET, SQL Server, and LINQ Entity Framework</li>
+            <li class="texto">Architected solutions using <strong>N-tier architecture</strong> and design patterns (abstract factory, singleton, OOP principles)</li>
+            <li class="texto">Developed web forms using ASP.NET, AJAX, JavaScript, jQuery, and integrated with business logic layer</li>
+          </ul>
+        </div>
+
+        <h2>Projects</h2>
+        <ul>
+          <li class="texto"><strong>AI Agent with Large Language Model (LLM)</strong> using Ollama (March 2024 – August 2024)</li>
+          <li class="texto"><strong>Air Quality Monitoring System</strong> — IoT + Web Dashboard (December 2023 – February 2024)</li>
+          <li class="texto"><strong>Orbit Game</strong> — Unity-based web game (October 2023 – November 2023)</li>
+        </ul>
+
+        <h2>Technical Skills</h2>
+        
+        <h3>Languages & Technologies:</h3>
+        <div style="margin: 15px 0;">
+          <span class="skill-badge">C#</span>
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">ASP.NET</span>
+          <span class="skill-badge">HTML</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">jQuery</span>
+          <span class="skill-badge">AJAX</span>
+          <span class="skill-badge">JSON APIs</span>
+        </div>
+
+        <h3>Frameworks & Tools:</h3>
+        <div style="margin: 15px 0;">
+          <span class="skill-badge">.NET Framework</span>
+          <span class="skill-badge">Visual Studio</span>
+          <span class="skill-badge">VS Code</span>
+          <span class="skill-badge">MySQL</span>
+          <span class="skill-badge">Git</span>
+          <span class="skill-badge">SQL Server</span>
+        </div>
+
+        <h3>Core Competencies:</h3>
+        <div style="margin: 15px 0;">
+          <span class="skill-badge">Backend Development</span>
+          <span class="skill-badge">API Development</span>
+          <span class="skill-badge">Database Design</span>
+          <span class="skill-badge">Stored Procedures</span>
+          <span class="skill-badge">Problem-Solving</span>
+          <span class="skill-badge">Agile Development</span>
+        </div>
+
+        <h2>Education</h2>
+        <ul>
+          <li class="texto"><strong>Master of Computer Applications (MCA)</strong> — Lovely Professional University, Punjab | CGPA: 7.5 | April 2025</li>
+          <li class="texto"><strong>Bachelor of Computer Applications (BCA)</strong> — Himachal Pradesh University | CGPA: 7.1 | March 2022</li>
+          <li class="texto"><strong>12th with Science</strong> — HP Board of School Education | 59.6% | March 2018</li>
+          <li class="texto"><strong>10th</strong> — HP Board of School Education | 71% | March 2016</li>
+        </ul>
+
+        <h2>Get in Touch</h2>
+        <p>I'm always interested in collaborating on innovative projects or discussing new opportunities in backend development and API integration.</p>
+        
+        <p>
+          📧 Email: <a class="link-texto" href="mailto:sahilthakur0147@gmail.com">sahilthakur0147@gmail.com</a><br>
+          📱 Phone: +91 9882598147<br>
+          💼 LinkedIn: <a class="link-texto" href="https://www.linkedin.com/in/sahilnetdev" target="_blank">linkedin.com/in/sahilnetdev</a><br>
+          💻 GitHub: <a class="link-texto" href="https://github.com/Sahilthakr" target="_blank">github.com/Sahilthakr</a>
+        </p>
       </div>
     </main>
   </div>
- 
+
   <footer>
-    <p> See also: 
-      <a class="link" href="https://andersonlot.wordpress.com" target=_blank class="other-link">
-        Blog
-      </a>
-      <a class="link" href="https://github.com/andersonlot" target=_blank class="other-link">
+    <p>Connect with me:
+      <a class="link" href="https://github.com/Sahilthakr" target="_blank" class="other-link">
         GitHub
       </a>
-      <a class="link" href="https://br.linkedin.com/in/anderson-lot-roman-075928152" target=_blank class="other-link">
+      <a class="link" href="https://www.linkedin.com/in/sahilnetdev" target="_blank" class="other-link">
         LinkedIn
-      </a></p>
+      </a>
+    </p>
   </footer>
 
-
-
   <script>
-  
+    const logoAnimated = document.querySelector('.logo-animated');
+    
+    logoAnimated.addEventListener('mouseenter', function() {
+      this.style.filter = 'brightness(1.2)';
+    });
+    
+    logoAnimated.addEventListener('mouseleave', function() {
+      this.style.filter = 'brightness(1)';
+    });
   </script>
 
 </body>

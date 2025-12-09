@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="https://andersonlot.github.io/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title tabindex="1">Orbit Game - Sahil Thakur</title>
+  
+  <style>
+    /* Logo Styles */
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    .logo-animated {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-animated:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-text {
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .first-name {
+      color: #FFD700;
+      animation: fadeInSlide 1s ease-out;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    }
+
+    .last-name {
+      color: #ffffff;
+      animation: fadeInSlide 1s ease-out 0.3s backwards;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+      margin-left: 8px;
+    }
+
+    .logo-underline {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #FFD700, #ffffff);
+      animation: expandLine 1.5s ease-out 0.6s forwards;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+    }
+
+    .logo-animated:hover .first-name {
+      animation: glow 1.5s ease-in-out infinite;
+    }
+
+    .logo-animated:hover .last-name {
+      animation: glow 1.5s ease-in-out infinite 0.2s;
+    }
+
+    .game-screenshot {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin: 20px 0;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    }
+
+    .tech-badge {
+      display: inline-block;
+      padding: 5px 15px;
+      background: #f0f0f0;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes expandLine {
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        text-shadow: 0 0 15px rgba(255, 215, 0, 0.6),
+                     0 0 30px rgba(255, 215, 0, 0.4);
+      }
+      50% {
+        text-shadow: 0 0 25px rgba(255, 215, 0, 0.9),
+                     0 0 50px rgba(255, 215, 0, 0.6),
+                     0 0 70px rgba(255, 215, 0, 0.4);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo-text {
+        font-size: 28px;
+        letter-spacing: 3px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-text {
+        font-size: 22px;
+        letter-spacing: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Logo -->
+  <header id="lockup">
+    <div class="logo">
+      <div class="logo-animated">
+        <div class="logo-text">
+          <span class="first-name">SAHIL</span>
+          <span class="last-name">THAKUR</span>
+          <div class="logo-underline"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="container">
+    <!-- Site Navigation -->
+    <div class="column-span">
+      <nav>
+        <ul>
+          <li><a class="menu" href="../">Home</a></li>
+          <li><a></a></li>
+          <li><a class="titulo-menu"><strong>Projects:</strong></a></li>
+          <li><a class="menu" href="../en/Orbit Game/index.html">Orbit Game</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li class="links"><a class="menu" href="https://github.com/Sahilthakr" target="_blank">GitHub</a></li>
+          <li class="links"><a class="menu" href="https://www.linkedin.com/in/sahilnetdev" target="_blank">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <main>
+      <div id="home-page">
+        <h1>Orbit Game</h1>
+        <p>A simple, interactive game where you control an orbiting object around a central body. Built with Unity Engine, this game demonstrates basic orbital mechanics and gravity physics in an engaging way.</p>
+        
+        <h3>About the Game</h3>
+        <p>Orbit Game is an engaging physics-based game that challenges players to control an orbiting object. The goal is to maintain a stable orbit while preventing the object from being pulled into the central body or flying off into space. It's a fun and educational demonstration of orbital mechanics and gravitational forces.</p>
+        
+        <!-- Game Screenshot Placeholder -->
+        <!-- <div style="text-align: center; margin: 30px 0;">
+          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px; border-radius: 15px; color: white;">
+            <h3 style="color: white;">🎮 Game Screenshot</h3>
+            <p>Add your game screenshot or gameplay GIF here</p>
+            <p style="font-size: 12px; opacity: 0.8;">Replace this section with: &lt;img src="path/to/screenshot.png" class="game-screenshot" alt="Orbit Game"&gt;</p>
+          </div>
+        </div> -->
+        
+        <h3>Features</h3>
+        <ul>
+          <li class="texto"><strong>Simple Controls:</strong> Easy to pick up and play with keyboard or mouse controls</li>
+          <li class="texto"><strong>Orbital Mechanics:</strong> Experience realistic gravity and orbital physics</li>
+          <li class="texto"><strong>Score Tracking:</strong> Compete with yourself to achieve higher scores</li>
+          <li class="texto"><strong>Progressive Difficulty:</strong> The game becomes more challenging as you advance</li>
+          <li class="texto"><strong>Physics Simulation:</strong> Real-time gravitational force calculations</li>
+        </ul>
+        
+        <h3>Technologies Used</h3>
+        <div style="margin: 20px 0;">
+          <span class="tech-badge">🎮 Unity Engine</span>
+          <span class="tech-badge">💻 C#</span>
+          <span class="tech-badge">🔬 Physics System</span>
+          <span class="tech-badge">🎨 2D/3D Graphics</span>
+        </div>
+        
+        <h3>How to Play</h3>
+        <ol>
+          <li class="texto">Download and run the game executable for your platform</li>
+          <li class="texto">Use keyboard controls to adjust the orbit velocity</li>
+          <li class="texto">Maintain a stable orbit without crashing into the center</li>
+          <li class="texto">Avoid flying off into space by managing your speed</li>
+          <li class="texto">Try to achieve the highest score possible!</li>
+        </ol>
+        
+        <h3>Game Physics</h3>
+        <p>The game uses Newton's law of universal gravitation to simulate realistic orbital mechanics:</p>
+        <p style="text-align: center; font-style: italic; margin: 20px 0; font-size: 18px;">
+          F = G × (m₁ × m₂) / r²
+        </p>
+        <p>Where F is the gravitational force, G is the gravitational constant, m₁ and m₂ are the masses of the two objects, and r is the distance between their centers.</p>
+        
+        <!-- Download/Source Code Section -->
+        <div style="text-align: center; margin: 40px 0;">
+          <h3>Get the Game</h3>
+          <a href="https://github.com/Sahilthakr/orbit-Game" target="_blank" class="download-btn">
+            📂 View Source Code on GitHub
+          </a>
+          <br>
+          <!-- Add download links when available -->
+          <!-- <a href="#" class="download-btn">💾 Download for Windows</a>
+          <a href="#" class="download-btn">🍎 Download for Mac</a>
+          <a href="#" class="download-btn">🐧 Download for Linux</a> -->
+        </div>
+        
+        <h3>Development Notes</h3>
+        <p>This project was built using Unity Engine to explore game physics and orbital mechanics. The game demonstrates how gravitational forces affect objects in space and provides an interactive way to learn about these concepts.</p>
+        
+        <p>Check out the full source code and Unity project files on my <a class="link-texto" href="https://github.com/Sahilthakr/orbit-Game" target="_blank">GitHub Repository</a>.</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>Connect with me: 
+      <a class="link" href="https://github.com/Sahilthakr" target="_blank" class="other-link">
+        GitHub
+      </a>
+      <a class="link" href="https://www.linkedin.com/in/sahilnetdev" target="_blank" class="other-link">
+        LinkedIn
+      </a>
+    </p>
+  </footer>
+  
+  <script>
+    const logoAnimated = document.querySelector('.logo-animated');
+    
+    logoAnimated.addEventListener('mouseenter', function() {
+      this.style.filter = 'brightness(1.2)';
+    });
+    
+    logoAnimated.addEventListener('mouseleave', function() {
+      this.style.filter = 'brightness(1)';
+    });
+  </script>
+
+</body>
+
+</html>
