@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="https://andersonlot.github.io/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Air Quality Monitoring System - Sahil Thakur</title>
+  
+  <style>
+    /* Logo Styles */
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    .logo-animated {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-animated:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-text {
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .first-name {
+      color: #FFD700;
+      animation: fadeInSlide 1s ease-out;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    }
+
+    .last-name {
+      color: #ffffff;
+      animation: fadeInSlide 1s ease-out 0.3s backwards;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+      margin-left: 8px;
+    }
+
+    .logo-underline {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #FFD700, #ffffff);
+      animation: expandLine 1.5s ease-out 0.6s forwards;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+    }
+
+    .logo-animated:hover .first-name {
+      animation: glow 1.5s ease-in-out infinite;
+    }
+
+    .logo-animated:hover .last-name {
+      animation: glow 1.5s ease-in-out infinite 0.2s;
+    }
+
+    .project-screenshot {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin: 20px 0;
+    }
+
+    .github-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .github-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    }
+
+    .tech-badge {
+      display: inline-block;
+      padding: 5px 15px;
+      background: #f0f0f0;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    .feature-box {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 4px solid #FFD700;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes expandLine {
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        text-shadow: 0 0 15px rgba(255, 215, 0, 0.6),
+                     0 0 30px rgba(255, 215, 0, 0.4);
+      }
+      50% {
+        text-shadow: 0 0 25px rgba(255, 215, 0, 0.9),
+                     0 0 50px rgba(255, 215, 0, 0.6),
+                     0 0 70px rgba(255, 215, 0, 0.4);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo-text {
+        font-size: 28px;
+        letter-spacing: 3px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-text {
+        font-size: 22px;
+        letter-spacing: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Logo -->
+  <header id="lockup">
+    <div class="logo">
+      <div class="logo-animated">
+        <div class="logo-text">
+          <span class="first-name">SAHIL</span>
+          <span class="last-name">THAKUR</span>
+          <div class="logo-underline"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="container">
+    <!-- Site Navigation -->
+    <div class="column-span">
+      <nav>
+        <ul>
+          <li><a class="menu" href="../../index.html">Home</a></li>
+          <li><a class="menu" href="../../about.html">About</a></li>
+          <li><a></a></li>
+          <li><a class="titulo-menu"><strong>Projects:</strong></a></li>
+          <li><a class="menu-ativo" href="">Air Quality Monitor</a></li>
+          <li><a class="menu" href="../Orbit-Game/index.html">Orbit Game</a></li>
+          <li><a class="menu" href="../AI-Agent/index.html">AI Agent</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li class="links"><a class="menu" href="https://github.com/Sahilthakr" target="_blank">GitHub</a></li>
+          <li class="links"><a class="menu" href="https://www.linkedin.com/in/sahilnetdev" target="_blank">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <main>
+      <div id="home-page">
+        <h1>Air Quality Monitoring System</h1>
+        <p><strong>Project Duration:</strong> December 2023 – February 2024</p>
+        
+        <h3>About the Project</h3>
+        <p>The Air Quality Monitoring System is an IoT-based solution that tracks and analyzes air pollution parameters in real-time. This project combines hardware sensors with a web-based dashboard to provide comprehensive environmental monitoring capabilities.</p>
+        
+        <!-- Project Demo Placeholder -->
+        <div style="text-align: center; margin: 30px 0;">
+          <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); padding: 80px; border-radius: 15px; color: white;">
+            <h3 style="color: white;">🌍 System Dashboard</h3>
+            <p>Add your system screenshot or dashboard interface here</p>
+            <p style="font-size: 12px; opacity: 0.8;">Replace with: &lt;img src="path/to/dashboard.png" class="project-screenshot" alt="Dashboard"&gt;</p>
+          </div>
+        </div>
+        
+        <h3>Key Features</h3>
+        <div class="feature-box">
+          <h4>Real-Time Monitoring</h4>
+          <ul>
+            <li class="texto">Continuous tracking of air quality parameters (PM2.5, PM10, CO2, temperature, humidity)</li>
+            <li class="texto">Live data visualization with charts and graphs</li>
+            <li class="texto">Historical data logging and analysis</li>
+            <li class="texto">Alert system for hazardous pollution levels</li>
+          </ul>
+        </div>
+
+        <div class="feature-box">
+          <h4>Web Dashboard</h4>
+          <ul>
+            <li class="texto">Interactive web interface for data visualization</li>
+            <li class="texto">Real-time updates using WebSocket connections</li>
+            <li class="texto">Responsive design for mobile and desktop access</li>
+            <li class="texto">Data export functionality (CSV, JSON)</li>
+          </ul>
+        </div>
+
+        <div class="feature-box">
+          <h4>IoT Integration</h4>
+          <ul>
+            <li class="texto">Arduino/ESP32 microcontroller integration</li>
+            <li class="texto">Multiple sensor support (MQ series, DHT sensors, dust sensors)</li>
+            <li class="texto">Wi-Fi connectivity for data transmission</li>
+            <li class="texto">Low-power operation mode</li>
+          </ul>
+        </div>
+        
+        <h3>Technologies Used</h3>
+        <div style="margin: 20px 0;">
+          <span class="tech-badge">🐍 Python</span>
+          <span class="tech-badge">🌐 Flask/Django</span>
+          <span class="tech-badge">📊 NumPy</span>
+          <span class="tech-badge">📈 Pandas</span>
+          <span class="tech-badge">🔌 IoT</span>
+          <span class="tech-badge">📡 MQTT</span>
+          <span class="tech-badge">💾 SQLite/MySQL</span>
+          <span class="tech-badge">📱 JavaScript</span>
+          <span class="tech-badge">🎨 HTML/CSS</span>
+          <span class="tech-badge">📊 Chart.js</span>
+        </div>
+        
+        <h3>System Architecture</h3>
+        <ol>
+          <li class="texto"><strong>Hardware Layer:</strong> Sensors connected to microcontroller (Arduino/ESP32)</li>
+          <li class="texto"><strong>Data Collection:</strong> Sensor readings collected at regular intervals</li>
+          <li class="texto"><strong>Communication:</strong> Data transmitted via Wi-Fi/MQTT to server</li>
+          <li class="texto"><strong>Backend Processing:</strong> Python server processes and stores data</li>
+          <li class="texto"><strong>Database:</strong> Time-series data stored in database</li>
+          <li class="texto"><strong>Web Dashboard:</strong> Real-time visualization and analysis interface</li>
+        </ol>
+        
+        <h3>How It Works</h3>
+        <ol>
+          <li class="texto">Air quality sensors continuously measure environmental parameters</li>
+          <li class="texto">Microcontroller collects sensor data and packages it</li>
+          <li class="texto">Data is transmitted to the server via Wi-Fi/MQTT protocol</li>
+          <li class="texto">Python backend processes the data and updates the database</li>
+          <li class="texto">Web dashboard fetches and displays real-time data with visualizations</li>
+          <li class="texto">System triggers alerts when pollution levels exceed safe thresholds</li>
+        </ol>
+
+        <h3>Measured Parameters</h3>
+        <ul>
+          <li class="texto"><strong>PM2.5 & PM10:</strong> Particulate matter concentration</li>
+          <li class="texto"><strong>CO2 Levels:</strong> Carbon dioxide concentration</li>
+          <li class="texto"><strong>Temperature:</strong> Ambient temperature readings</li>
+          <li class="texto"><strong>Humidity:</strong> Relative humidity percentage</li>
+          <li class="texto"><strong>Air Quality Index (AQI):</strong> Calculated overall air quality score</li>
+        </ul>
+        
+        <h3>Applications</h3>
+        <ul>
+          <li class="texto">Home air quality monitoring</li>
+          <li class="texto">Industrial environment monitoring</li>
+          <li class="texto">Smart city initiatives</li>
+          <li class="texto">Environmental research and data collection</li>
+          <li class="texto">Health and safety compliance monitoring</li>
+        </ul>
+
+        <h3>Future Enhancements</h3>
+        <ul>
+          <li class="texto">Mobile app development for iOS and Android</li>
+          <li class="texto">Machine learning for pollution prediction</li>
+          <li class="texto">Integration with weather APIs for enhanced analysis</li>
+          <li class="texto">Multi-location monitoring network</li>
+          <li class="texto">Cloud deployment for scalability</li>
+        </ul>
+        
+        <!-- GitHub Section -->
+        <div style="text-align: center; margin: 40px 0;">
+          <h3>View Source Code</h3>
+          <a href="https://github.com/Sahilthakr/Air-Quality-Monitoring-System" target="_blank" class="github-btn">
+            📂 View on GitHub
+          </a>
+        </div>
+        
+        <h3>Project Timeline</h3>
+        <p><strong>December 2023:</strong> Project planning, hardware selection, and initial setup</p>
+        <p><strong>January 2024:</strong> Sensor integration, backend development, and database design</p>
+        <p><strong>February 2024:</strong> Dashboard development, testing, and deployment</p>
+
+        <p style="margin-top: 30px;">This project demonstrates the integration of IoT hardware with modern web technologies to create a practical environmental monitoring solution. Check out the complete code and documentation on <a class="link-texto" href="https://github.com/Sahilthakr/Air-Quality-Monitoring-System" target="_blank">GitHub</a>!</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>Connect with me:
+      <a class="link" href="https://github.com/Sahilthakr" target="_blank" class="other-link">GitHub</a>
+      <a class="link" href="https://www.linkedin.com/in/sahilnetdev" target="_blank" class="other-link">LinkedIn</a>
+    </p>
+  </footer>
+  
+  <script>
+    const logoAnimated = document.querySelector('.logo-animated');
+    
+    logoAnimated.addEventListener('mouseenter', function() {
+      this.style.filter = 'brightness(1.2)';
+    });
+    
+    logoAnimated.addEventListener('mouseleave', function() {
+      this.style.filter = 'brightness(1)';
+    });
+  </script>
+
+</body>
+
+</html>

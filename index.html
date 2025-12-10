@@ -6,9 +6,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title tabindex="1">Projetos</title>
-</head>
-<body>
+  <title>Sahil Thakur - Portfolio</title>
 
   <style>
     /* Logo Styles */
@@ -61,12 +59,113 @@
       box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
     }
 
-    .logo-animated:hover .first-name {
+    .logo-animated:hover .first-name,
+    .logo-animated:hover .last-name {
       animation: glow 1.5s ease-in-out infinite;
     }
 
-    .logo-animated:hover .last-name {
-      animation: glow 1.5s ease-in-out infinite 0.2s;
+    .grid_projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    .item_grid_projects {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card_container {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card_container h4 {
+      margin: 0 0 10px 0;
+      color: #333;
+      font-size: 20px;
+    }
+
+    .card_container p {
+      flex-grow: 1;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: auto;
+    }
+
+    .tech-tag {
+      background: #FFD700;
+      color: #000;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .placeholder-img {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 64px;
+      font-weight: bold;
+      height: 200px;
+    }
+
+    .intro-section {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 40px;
+      border-radius: 15px;
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .intro-section h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .intro-section p {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     @keyframes fadeInSlide {
@@ -100,14 +199,18 @@
 
     @media (max-width: 768px) {
       .logo-text {
-        font-size: 32px;
-        letter-spacing: 3px;
+        font-size: 36px;
+        letter-spacing: 4px;
+      }
+      
+      .grid_projects {
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 480px) {
       .logo-text {
-        font-size: 24px;
+        font-size: 28px;
         letter-spacing: 2px;
       }
     }
@@ -115,8 +218,8 @@
 </head>
 
 <body>
+  <!-- Logo -->
   <header id="lockup">
-    <!-- Animated Logo -->
     <div class="logo">
       <div class="logo-animated">
         <div class="logo-text">
@@ -127,67 +230,181 @@
       </div>
     </div>
   </header>
-  <!-- close logo -->
+
   <div class="container">
-    <!-- site navigation -->
+    <!-- Site Navigation -->
     <div class="column-span">
       <nav>
         <ul>
-          <li><a class="menu-ativo" href="" >Menu</a></li>
-          <li><a class="menu" href="about.html" >About</a></li>
+          <li><a class="menu-ativo" href="">Home</a></li>
+          <li><a class="menu" href="about.html">About</a></li>
           <li><a></a></li>
           <li><a class="titulo-menu"><strong>Projects:</strong></a></li>
-          <li><a class="menu" href="../en/Orbit-Game/index.html">Orbit Game</a></li>
-       
+          <li><a class="menu" href="en/Orbit-Game/index.html">Orbit Game</a></li>
+          <li><a class="menu" href="en/Air-Quality/index.html">Air Quality Monitor</a></li>
+          <li><a class="menu" href="en/AI-Agent/index.html">AI Agent</a></li>
         </ul>
       </nav>
       <nav>
         <ul>
-      <li class="links"><a class="menu" href="https://github.com/Sahilthakr" target="_blank">GitHub</a></li>
-          <li class="links"><a class="menu" href="https://www.linkedin.com/in/sahilnetdev/" target="_blank">LinkedIn</a></li>
+          <li class="links"><a class="menu" href="https://github.com/Sahilthakr" target="_blank">GitHub</a></li>
+          <li class="links"><a class="menu" href="https://www.linkedin.com/in/sahilnetdev" target="_blank">LinkedIn</a></li>
         </ul>
       </nav>
     </div>
+
     <main>
       <div id="home-page">
-        
-        <h2>My Projects</h2>
-         <div class="grid_projects">  
-          <a class="item_grid_projects">
-            <div class="card">
-              <div class="tenor-gif-embed" data-postid="16351663" data-share-method="host" data-aspect-ratio="1.01587" data-width="100%"><a href="https://tenor.com/view/space-orbit-solar-system-planets-gif-16351663">Space Orbit GIF</a>from <a href="https://tenor.com/search/space-gifs">Space GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-              <div class="card_container">
-                <h4><b>Orbit Game</b></h4>
-                <p></p>
+        <!-- Intro Section -->
+        <div class="intro-section">
+          <h2>Backend Developer & Problem Solver</h2>
+          <p>Hi! I'm Sahil Thakur, a passionate backend developer specializing in <strong>.NET C#</strong>, <strong>API development</strong>, and building scalable solutions. I love turning complex problems into elegant code and exploring innovative technologies from IoT to AI.</p>
+        </div>
+
+        <h2>Featured Projects</h2>
+        <p>Explore my latest work across backend development, IoT, game development, and AI:</p>
+
+        <div class="grid_projects">
+
+          <!-- Air Quality Monitoring System -->
+           <div class="card">
+            <div class="tenor-gif-embed" data-postid="21230021" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/together-we-can-make-a-change-lcvearthday-lcv-worldwarzero-climate-gif-21230021">Together We Can Make A Change Lcvearthday Sticker</a>from <a href="https://tenor.com/search/together+we+can+make+a+change-stickers">Together We Can Make A Change Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> <div class="card_container">
+                <h4><b>Air Quality Monitoring System</b></h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">IoT</span>
+                  <span class="tech-tag">Dashboard</span>
+                </div>
               </div>
             </div>
           </a>
 
-      
+          <!-- Orbit Game -->
+          <div class="card">
+                <div class="tenor-gif-embed" data-postid="16351663" data-share-method="host" data-aspect-ratio="1.01587" data-width="100%"><a href="https://tenor.com/view/space-orbit-solar-system-planets-gif-16351663">Space Orbit GIF</a>from <a href="https://tenor.com/search/space-gifs">Space GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+            <div class="card_container">
+                <h4><b>Orbit Game</b></h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">Unity</span>
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">Game Dev</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- AI Agent with LLM -->
+          <div class="card">
+             <div class="tenor-gif-embed" data-postid="4325867913982949729" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/cryptoagent-cryptoagents-crypto-agent-crypto-agents-agents-crypto-gif-4325867913982949729">Cryptoagent Cryptoagents GIF</a>from <a href="https://tenor.com/search/cryptoagent-gifs">Cryptoagent GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> <div class="card_container">
+                <h4><b>AI Agent with LLM</b></h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Ollama</span>
+                  <span class="tech-tag">AI</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Backend API Development -->
+         <div class="card">
+             <div class="tenor-gif-embed" data-postid="12505798" data-share-method="host" data-aspect-ratio="1.3617" data-width="100%"><a href="https://tenor.com/view/programmer-day-code-developers-software-gif-12505798">Programmer Day Code GIF</a>from <a href="https://tenor.com/search/programmer+day-gifs">Programmer Day GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> <div class="card_container">
+                <h4><b>Backend API Development</b></h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">ASP.NET</span>
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">REST API</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Recruitment System -->
+           <div class="card">
+              <div class="tenor-gif-embed" data-postid="17336127" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/hiring-we-are-hiring-job-vacancy-job-opening-gif-17336127">Hiring We Are Hiring GIF</a>from <a href="https://tenor.com/search/hiring-gifs">Hiring GIFs</a></div>
+              <div class="card_container">
+                <h4><b>Recruitment Management System</b></h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">.NET</span>
+                  <span class="tech-tag">Web API</span>
+                  <span class="tech-tag">Enterprise</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Portfolio Website -->
+         <div class="card" style="display: none;">
+            <div class="tenor-gif-embed" data-postid="15058313" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/software-developers-changing-jobs-org-changes-low-life-talent-churn-gif-15058313">Software Developers Changing Jobs GIF</a>from <a href="https://tenor.com/search/software+developers-gifs">Software Developers GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> <div class="card_container">
+                <h4><b>Portfolio Website</b></h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </a>
 
         </div>
+
+        <h3 style="margin-top: 50px;">💻 Technical Expertise</h3>
+        <p>I specialize in backend development with a strong foundation in modern technologies:</p>
+        <ul>
+          <li class="texto"><strong>.NET Framework & ASP.NET:</strong> Building scalable backend applications, RESTful APIs, and enterprise solutions</li>
+          <li class="texto"><strong>C# Programming:</strong> Clean code practices, OOP principles, SOLID design patterns, and N-tier architecture</li>
+          <li class="texto"><strong>Database Management:</strong> SQL Server, MySQL, Entity Framework, LINQ, stored procedures, and database optimization</li>
+          <li class="texto"><strong>API Development:</strong> RESTful services, authentication, authorization, third-party integrations, and API design</li>
+          <li class="texto"><strong>Python:</strong> Scripting, IoT projects, data analysis with NumPy and Pandas, AI/ML integration</li>
+          <li class="texto"><strong>Unity & Game Development:</strong> C# game logic, physics systems, gameplay mechanics, and interactive experiences</li>
+          <li class="texto"><strong>Frontend Technologies:</strong> HTML, CSS, JavaScript, jQuery, AJAX, responsive design</li>
+          <li class="texto"><strong>Tools & Platforms:</strong> Visual Studio, VS Code, Git, Docker, Agile methodologies</li>
+        </ul>
+
+        <h3 style="margin-top: 40px;">🎓 Professional Experience</h3>
+        <p><strong>Backend Intern at IGSRS Pvt Ltd (Aug 2023 - Feb 2025):</strong> Designed RESTful APIs, integrated AI features for recruitment, built candidate pipeline systems, and optimized backend performance.</p>
+        <p><strong>Backend Trainee at Kindlebit Solution (Aug 2022 - Mar 2023):</strong> Developed ASP.NET MVC applications, implemented N-tier architecture, and worked with SQL Server and Entity Framework.</p>
+
+        <h3 style="margin-top: 40px;">🎯 What I'm Working On</h3>
+        <ul>
+          <li class="texto">Building scalable backend APIs with .NET Core</li>
+          <li class="texto">Exploring AI/ML integration in web applications</li>
+          <li class="texto">Contributing to open-source projects</li>
+          <li class="texto">Learning cloud deployment with Azure and AWS</li>
+        </ul>
+
+        <h3 style="margin-top: 40px;">📫 Let's Connect!</h3>
+        <p>I'm always interested in collaborating on innovative projects or discussing new opportunities in backend development.</p>
+        <p style="font-size: 16px; line-height: 2;">
+          📧 Email: <a class="link-texto" href="mailto:sahilthakur0147@gmail.com">sahilthakur0147@gmail.com</a><br>
+          💼 LinkedIn: <a class="link-texto" href="https://www.linkedin.com/in/sahilnetdev" target="_blank">linkedin.com/in/sahilnetdev</a><br>
+          💻 GitHub: <a class="link-texto" href="https://github.com/Sahilthakr" target="_blank">github.com/Sahilthakr</a><br>
+          📱 Phone: +91 9882598147
+        </p>
       </div>
     </main>
   </div>
 
   <footer>
-    <p> Acesse também: 
-      <a class="link" href="https://andersonlot.wordpress.com" target=_blank class="other-link">
-        Blog
-      </a>
-      <a class="link" href="https://github.com/andersonlot" target=_blank class="other-link">
-        GitHub
-      </a>
-      <a class="link" href="https://br.linkedin.com/in/anderson-lot-roman-075928152" target=_blank class="other-link">
-        LinkedIn
-      </a></p>
+    <p>Connect with me:
+      <a class="link" href="https://github.com/Sahilthakr" target="_blank" class="other-link">GitHub</a>
+      <a class="link" href="https://www.linkedin.com/in/sahilnetdev" target="_blank" class="other-link">LinkedIn</a>
+      <a class="link" href="https://instagram.com/sahiltenz" target="_blank" class="other-link">Instagram</a>
+    </p>
   </footer>
-  
+
   <script>
-  
+    const logoAnimated = document.querySelector('.logo-animated');
+    
+    logoAnimated.addEventListener('mouseenter', function() {
+      this.style.filter = 'brightness(1.2)';
+    });
+    
+    logoAnimated.addEventListener('mouseleave', function() {
+      this.style.filter = 'brightness(1)';
+    });
   </script>
 
 </body>
 
 </html>
-

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="https://andersonlot.github.io/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Agent with LLM - Sahil Thakur</title>
+  
+  <style>
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    .logo-animated {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-animated:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-text {
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .first-name {
+      color: #FFD700;
+      animation: fadeInSlide 1s ease-out;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    }
+
+    .last-name {
+      color: #ffffff;
+      animation: fadeInSlide 1s ease-out 0.3s backwards;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+      margin-left: 8px;
+    }
+
+    .logo-underline {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #FFD700, #ffffff);
+      animation: expandLine 1.5s ease-out 0.6s forwards;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+    }
+
+    .logo-animated:hover .first-name,
+    .logo-animated:hover .last-name {
+      animation: glow 1.5s ease-in-out infinite;
+    }
+
+    .github-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .github-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    }
+
+    .tech-badge {
+      display: inline-block;
+      padding: 5px 15px;
+      background: #f0f0f0;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    .feature-box {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 4px solid #FFD700;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    @keyframes fadeInSlide {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes expandLine {
+      to { width: 100%; }
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        text-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+      }
+      50% {
+        text-shadow: 0 0 25px rgba(255, 215, 0, 0.9), 0 0 50px rgba(255, 215, 0, 0.6);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo-text { font-size: 28px; letter-spacing: 3px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="lockup">
+    <div class="logo">
+      <div class="logo-animated">
+        <div class="logo-text">
+          <span class="first-name">SAHIL</span>
+          <span class="last-name">THAKUR</span>
+          <div class="logo-underline"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="column-span">
+      <nav>
+        <ul>
+          <li><a class="menu" href="../../index.html">Home</a></li>
+          <li><a class="menu" href="../../about.html">About</a></li>
+          <li><a></a></li>
+          <li><a class="titulo-menu"><strong>Projects:</strong></a></li>
+          <li><a class="menu-ativo" href="">AI Agent</a></li>
+          <li><a class="menu" href="../Orbit-Game/index.html">Orbit Game</a></li>
+          <li><a class="menu" href="../Air-Quality/index.html">Air Quality Monitor</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li class="links"><a class="menu" href="https://github.com/Sahilthakr" target="_blank">GitHub</a></li>
+          <li class="links"><a class="menu" href="https://www.linkedin.com/in/sahilnetdev" target="_blank">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <main>
+      <div id="home-page">
+        <h1>AI Agent with Large Language Model</h1>
+        <p><strong>Project Duration:</strong> March 2024 – August 2024</p>
+        
+        <h3>About the Project</h3>
+        <p>This project implements an intelligent AI agent powered by Large Language Models (LLM) using Ollama. The agent can understand context, maintain conversation history, perform automated tasks, and provide intelligent responses to user queries.</p>
+        
+        <div style="text-align: center; margin: 30px 0;">
+          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px; border-radius: 15px; color: white;">
+            <h3 style="color: white;">🤖 AI Agent Interface</h3>
+            <p>Add your AI agent interface screenshot here</p>
+            <p style="font-size: 12px; opacity: 0.8;">Replace with: &lt;img src="path/to/interface.png" class="project-screenshot"&gt;</p>
+          </div>
+        </div>
+        
+        <h3>Key Features</h3>
+        <div class="feature-box">
+          <h4>Intelligent Conversation</h4>
+          <ul>
+            <li class="texto">Natural language understanding and generation</li>
+            <li class="texto">Context-aware responses based on conversation history</li>
+            <li class="texto">Multi-turn dialogue capabilities</li>
+            <li class="texto">Personality customization and tone adjustment</li>
+          </ul>
+        </div>
+
+        <div class="feature-box">
+          <h4>Task Automation</h4>
+          <ul>
+            <li class="texto">Code generation and explanation</li>
+            <li class="texto">Text summarization and analysis</li>
+            <li class="texto">Question answering from documents</li>
+            <li class="texto">Data extraction and processing</li>
+          </ul>
+        </div>
+
+        <div class="feature-box">
+          <h4>Memory and Context</h4>
+          <ul>
+            <li class="texto">Conversation history retention</li>
+            <li class="texto">Long-term memory implementation</li>
+            <li class="texto">Context window management</li>
+            <li class="texto">Session persistence</li>
+          </ul>
+        </div>
+        
+        <h3>Technologies Used</h3>
+        <div style="margin: 20px 0;">
+          <span class="tech-badge">🐍 Python</span>
+          <span class="tech-badge">🦙 Ollama</span>
+          <span class="tech-badge">🤖 LLM</span>
+          <span class="tech-badge">🧠 LangChain</span>
+          <span class="tech-badge">💾 Vector DB</span>
+          <span class="tech-badge">🌐 FastAPI</span>
+          <span class="tech-badge">⚡ Asyncio</span>
+          <span class="tech-badge">📝 JSON</span>
+        </div>
+        
+        <h3>System Architecture</h3>
+        <ol>
+          <li class="texto"><strong>Frontend:</strong> User interface for interaction (CLI or Web)</li>
+          <li class="texto"><strong>API Layer:</strong> FastAPI backend for request handling</li>
+          <li class="texto"><strong>LLM Engine:</strong> Ollama running local language models</li>
+          <li class="texto"><strong>Memory System:</strong> Context and conversation storage</li>
+          <li class="texto"><strong>Task Executor:</strong> Automated task processing module</li>
+        </ol>
+        
+        <h3>Supported Models</h3>
+        <ul>
+          <li class="texto"><strong>Llama 2:</strong> Open-source LLM from Meta</li>
+          <li class="texto"><strong>Mistral:</strong> High-performance instruction model</li>
+          <li class="texto"><strong>CodeLlama:</strong> Specialized for code generation</li>
+          <li class="texto"><strong>Custom Models:</strong> Fine-tuned models for specific tasks</li>
+        </ul>
+
+        <h3>Use Cases</h3>
+        <div class="feature-box">
+          <h4>Development Assistant</h4>
+          <ul>
+            <li class="texto">Code generation and debugging</li>
+            <li class="texto">Documentation writing</li>
+            <li class="texto">API design suggestions</li>
+            <li class="texto">Code review and optimization tips</li>
+          </ul>
+        </div>
+
+        <div class="feature-box">
+          <h4>Knowledge Management</h4>
+          <ul>
+            <li class="texto">Document summarization</li>
+            <li class="texto">Information extraction</li>
+            <li class="texto">Question answering from knowledge base</li>
+            <li class="texto">Research assistance</li>
+          </ul>
+        </div>
+
+        <div class="feature-box">
+          <h4>Automation Tasks</h4>
+          <ul>
+            <li class="texto">Email drafting and responses</li>
+            <li class="texto">Report generation</li>
+            <li class="texto">Data analysis and insights</li>
+            <li class="texto">Content creation</li>
+          </ul>
+        </div>
+        
+        <h3>How It Works</h3>
+        <ol>
+          <li class="texto">User sends a query through the interface</li>
+          <li class="texto">System retrieves relevant context from memory</li>
+          <li class="texto">Query and context are formatted as prompt</li>
+          <li class="texto">Ollama processes the prompt using the LLM</li>
+          <li class="texto">Response is generated and formatted</li>
+          <li class="texto">Conversation history is updated</li>
+          <li class="texto">Response is returned to user</li>
+        </ol>
+
+        <h3>Technical Highlights</h3>
+        <ul>
+          <li class="texto"><strong>Local Deployment:</strong> Runs entirely offline using Ollama</li>
+          <li class="texto"><strong>Privacy-Focused:</strong> No data sent to external APIs</li>
+          <li class="texto"><strong>Customizable:</strong> Easy to modify prompts and behavior</li>
+          <li class="texto"><strong>Efficient:</strong> Optimized for consumer hardware</li>
+          <li class="texto"><strong>Extensible:</strong> Plugin system for additional capabilities</li>
+        </ul>
+
+        <h3>Future Enhancements</h3>
+        <ul>
+          <li class="texto">Voice input and output integration</li>
+          <li class="texto">Multi-modal support (text, images, audio)</li>
+          <li class="texto">Tool use and function calling</li>
+          <li class="texto">Web browsing capabilities</li>
+          <li class="texto">Fine-tuning on custom datasets</li>
+          <li class="texto">Multi-agent collaboration</li>
+        </ul>
+        
+        <div style="text-align: center; margin: 40px 0;">
+          <h3>Explore the Code</h3>
+          <a href="https://github.com/Sahilthakr" target="_blank" class="github-btn">
+            📂 View on GitHub
+          </a>
+        </div>
+
+        <h3>Key Learnings</h3>
+        <p>This project provided hands-on experience with:</p>
+        <ul>
+          <li class="texto">Large Language Model deployment and optimization</li>
+          <li class="texto">Prompt engineering for better responses</li>
+          <li class="texto">Context management in conversational AI</li>
+          <li class="texto">Building scalable AI applications</li>
+          <li class="texto">Local LLM inference optimization</li>
+        </ul>
+
+        <p style="margin-top: 30px;">This AI agent demonstrates the power of running advanced language models locally while maintaining privacy and control. The project showcases modern AI development practices and practical implementation of LLM technology.</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>Connect with me:
+      <a class="link" href="https://github.com/Sahilthakr" target="_blank">GitHub</a>
+      <a class="link" href="https://www.linkedin.com/in/sahilnetdev" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+  
+  <script>
+    const logoAnimated = document.querySelector('.logo-animated');
+    logoAnimated.addEventListener('mouseenter', function() {
+      this.style.filter = 'brightness(1.2)';
+    });
+    logoAnimated.addEventListener('mouseleave', function() {
+      this.style.filter = 'brightness(1)';
+    });
+  </script>
+
+</body>
+
+</html>
