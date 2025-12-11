@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="https://andersonlot.github.io/style.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Agent with LLM - Sahil Thakur</title>
+  <title>Local AI Agent - Sahil Thakur</title>
   
   <style>
     .logo {
@@ -89,14 +89,6 @@
       font-size: 14px;
     }
 
-    .feature-box {
-      background: #f9f9f9;
-      padding: 20px;
-      border-left: 4px solid #FFD700;
-      margin: 20px 0;
-      border-radius: 5px;
-    }
-
     @keyframes fadeInSlide {
       from { opacity: 0; transform: translateY(15px); }
       to { opacity: 1; transform: translateY(0); }
@@ -157,159 +149,59 @@
     
     <main>
       <div id="home-page">
-        <h1>AI Agent with Large Language Model</h1>
+        <h1>Local AI Agent with Ollama</h1>
         <p><strong>Project Duration:</strong> March 2024 – August 2024</p>
         
         <h3>About the Project</h3>
-        <p>This project implements an intelligent AI agent powered by Large Language Models (LLM) using Ollama. The agent can understand context, maintain conversation history, perform automated tasks, and provide intelligent responses to user queries.</p>
+        <p>This project implements a local AI agent using Ollama and vector databases for intelligent document retrieval and question answering. The agent runs entirely on your local machine, leveraging ChromaDB for efficient semantic search over CSV documents and personal data.</p>
         
-        <div style="text-align: center; margin: 30px 0;">
-          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px; border-radius: 15px; color: white;">
-            <h3 style="color: white;">🤖 AI Agent Interface</h3>
-            <p>Add your AI agent interface screenshot here</p>
-            <p style="font-size: 12px; opacity: 0.8;">Replace with: &lt;img src="path/to/interface.png" class="project-screenshot"&gt;</p>
-          </div>
-        </div>
+        <p>Built with Ollama for local LLM inference, the system combines natural language processing with vector embeddings to provide context-aware responses based on stored documents, including personal information and datasets like restaurant reviews.</p>
         
         <h3>Key Features</h3>
-        <div class="feature-box">
-          <h4>Intelligent Conversation</h4>
-          <ul>
-            <li class="texto">Natural language understanding and generation</li>
-            <li class="texto">Context-aware responses based on conversation history</li>
-            <li class="texto">Multi-turn dialogue capabilities</li>
-            <li class="texto">Personality customization and tone adjustment</li>
-          </ul>
-        </div>
-
-        <div class="feature-box">
-          <h4>Task Automation</h4>
-          <ul>
-            <li class="texto">Code generation and explanation</li>
-            <li class="texto">Text summarization and analysis</li>
-            <li class="texto">Question answering from documents</li>
-            <li class="texto">Data extraction and processing</li>
-          </ul>
-        </div>
-
-        <div class="feature-box">
-          <h4>Memory and Context</h4>
-          <ul>
-            <li class="texto">Conversation history retention</li>
-            <li class="texto">Long-term memory implementation</li>
-            <li class="texto">Context window management</li>
-            <li class="texto">Session persistence</li>
-          </ul>
-        </div>
+        <ul>
+          <li class="texto"><strong>Local LLM with Ollama:</strong> Runs language models locally without external API dependencies</li>
+          <li class="texto"><strong>Vector Database Integration:</strong> Uses ChromaDB for efficient semantic search and document retrieval</li>
+          <li class="texto"><strong>Document Processing:</strong> Processes and indexes multiple CSV files including personal information and domain-specific datasets</li>
+          <li class="texto"><strong>Semantic Search:</strong> Performs intelligent semantic queries over stored documents</li>
+          <li class="texto"><strong>Context-Aware Responses:</strong> Retrieves relevant information from vector store to provide informed answers</li>
+          <li class="texto"><strong>Privacy-Focused:</strong> All data and processing stays on your local machine</li>
+        </ul>
         
         <h3>Technologies Used</h3>
         <div style="margin: 20px 0;">
           <span class="tech-badge">🐍 Python</span>
           <span class="tech-badge">🦙 Ollama</span>
-          <span class="tech-badge">🤖 LLM</span>
-          <span class="tech-badge">🧠 LangChain</span>
-          <span class="tech-badge">💾 Vector DB</span>
-          <span class="tech-badge">🌐 FastAPI</span>
-          <span class="tech-badge">⚡ Asyncio</span>
-          <span class="tech-badge">📝 JSON</span>
-        </div>
-        
-        <h3>System Architecture</h3>
-        <ol>
-          <li class="texto"><strong>Frontend:</strong> User interface for interaction (CLI or Web)</li>
-          <li class="texto"><strong>API Layer:</strong> FastAPI backend for request handling</li>
-          <li class="texto"><strong>LLM Engine:</strong> Ollama running local language models</li>
-          <li class="texto"><strong>Memory System:</strong> Context and conversation storage</li>
-          <li class="texto"><strong>Task Executor:</strong> Automated task processing module</li>
-        </ol>
-        
-        <h3>Supported Models</h3>
-        <ul>
-          <li class="texto"><strong>Llama 2:</strong> Open-source LLM from Meta</li>
-          <li class="texto"><strong>Mistral:</strong> High-performance instruction model</li>
-          <li class="texto"><strong>CodeLlama:</strong> Specialized for code generation</li>
-          <li class="texto"><strong>Custom Models:</strong> Fine-tuned models for specific tasks</li>
-        </ul>
-
-        <h3>Use Cases</h3>
-        <div class="feature-box">
-          <h4>Development Assistant</h4>
-          <ul>
-            <li class="texto">Code generation and debugging</li>
-            <li class="texto">Documentation writing</li>
-            <li class="texto">API design suggestions</li>
-            <li class="texto">Code review and optimization tips</li>
-          </ul>
-        </div>
-
-        <div class="feature-box">
-          <h4>Knowledge Management</h4>
-          <ul>
-            <li class="texto">Document summarization</li>
-            <li class="texto">Information extraction</li>
-            <li class="texto">Question answering from knowledge base</li>
-            <li class="texto">Research assistance</li>
-          </ul>
-        </div>
-
-        <div class="feature-box">
-          <h4>Automation Tasks</h4>
-          <ul>
-            <li class="texto">Email drafting and responses</li>
-            <li class="texto">Report generation</li>
-            <li class="texto">Data analysis and insights</li>
-            <li class="texto">Content creation</li>
-          </ul>
+          <span class="tech-badge">💾 ChromaDB</span>
+          <span class="tech-badge">📊 CSV Processing</span>
+          <span class="tech-badge">🧠 Vector Embeddings</span>
+          <span class="tech-badge">🔍 Semantic Search</span>
         </div>
         
         <h3>How It Works</h3>
         <ol>
-          <li class="texto">User sends a query through the interface</li>
-          <li class="texto">System retrieves relevant context from memory</li>
-          <li class="texto">Query and context are formatted as prompt</li>
-          <li class="texto">Ollama processes the prompt using the LLM</li>
-          <li class="texto">Response is generated and formatted</li>
-          <li class="texto">Conversation history is updated</li>
-          <li class="texto">Response is returned to user</li>
+          <li class="texto">Documents and CSV files are loaded into the system</li>
+          <li class="texto">Text is split into chunks and converted to vector embeddings</li>
+          <li class="texto">Embeddings are stored in ChromaDB for efficient retrieval</li>
+          <li class="texto">User queries are converted to vectors and matched against the database</li>
+          <li class="texto">Relevant documents are retrieved based on semantic similarity</li>
+          <li class="texto">Ollama LLM generates responses using the retrieved context</li>
         </ol>
 
-        <h3>Technical Highlights</h3>
+        <h3>Dataset Components</h3>
         <ul>
-          <li class="texto"><strong>Local Deployment:</strong> Runs entirely offline using Ollama</li>
-          <li class="texto"><strong>Privacy-Focused:</strong> No data sent to external APIs</li>
-          <li class="texto"><strong>Customizable:</strong> Easy to modify prompts and behavior</li>
-          <li class="texto"><strong>Efficient:</strong> Optimized for consumer hardware</li>
-          <li class="texto"><strong>Extensible:</strong> Plugin system for additional capabilities</li>
-        </ul>
-
-        <h3>Future Enhancements</h3>
-        <ul>
-          <li class="texto">Voice input and output integration</li>
-          <li class="texto">Multi-modal support (text, images, audio)</li>
-          <li class="texto">Tool use and function calling</li>
-          <li class="texto">Web browsing capabilities</li>
-          <li class="texto">Fine-tuning on custom datasets</li>
-          <li class="texto">Multi-agent collaboration</li>
+          <li class="texto"><strong>Personal Information:</strong> Sahil Thakur's biographical and professional data</li>
+          <li class="texto"><strong>Restaurant Reviews:</strong> Dataset for sentiment analysis and information retrieval</li>
+          <li class="texto"><strong>Custom Data:</strong> Additional CSV datasets for specific use cases</li>
         </ul>
         
         <div style="text-align: center; margin: 40px 0;">
-          <h3>Explore the Code</h3>
-          <a href="https://github.com/Sahilthakr" target="_blank" class="github-btn">
+          <h3>View Source Code</h3>
+          <a href="https://github.com/Sahilthakr/Local-agent" target="_blank" class="github-btn">
             📂 View on GitHub
           </a>
         </div>
 
-        <h3>Key Learnings</h3>
-        <p>This project provided hands-on experience with:</p>
-        <ul>
-          <li class="texto">Large Language Model deployment and optimization</li>
-          <li class="texto">Prompt engineering for better responses</li>
-          <li class="texto">Context management in conversational AI</li>
-          <li class="texto">Building scalable AI applications</li>
-          <li class="texto">Local LLM inference optimization</li>
-        </ul>
-
-        <p style="margin-top: 30px;">This AI agent demonstrates the power of running advanced language models locally while maintaining privacy and control. The project showcases modern AI development practices and practical implementation of LLM technology.</p>
+        <p style="margin-top: 30px;">This project demonstrates the implementation of a privacy-focused AI agent that runs locally using Ollama while leveraging modern vector database technology for intelligent document retrieval. Check out the complete code on <a class="link-texto" href="https://github.com/Sahilthakr/Local-agent" target="_blank">GitHub</a>!</p>
       </div>
     </main>
   </div>
